@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>My view</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4">
+		<a th:href="@{/new}" class="btn btn-success">Agregar</a>
+	</div>
+	<div class="container mt-4">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Apellido paterno</th>
+					<th>Apellido materno</th>
+					<th>e-mail</th>
+					<th>club</th>
+					<th>Acción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="formulario:${form}">
+					<td th:text="${formulario.id}"></td>
+					<td th:text="${formulario.name}"></td>
+					<td th:text="${formulario.fSurname}">
+					<td th:text="${formulario.sSurname}">
+					<td th:text="${formulario.email}"></td>
+					<td th:text="${formulario.club}"></td>
+					<td style='text-align:center'>
+					<a th:href="@{/editar/}+${formulario.id}" class="btn btn-outline-primary">Editar</a>
+					<a th:href="@{/eliminar/}+${formulario.id}" class="btn btn-outline-danger">Eliminar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
