@@ -78,7 +78,7 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 		<div class="row">
 				<div class="form-group">
 					<label for="clubname">Nombre club u organización a la que representa</label>
-					<input th:field="*{club}" type="text" class="form-control" id="inputbd" placeholder="Ingrese su fecha de nacimiento"  tabindex="8">
+					<input th:field="*{club}" type="text" class="form-control" id="inputclub" placeholder="Ingrese su club"  tabindex="8">
 			</div>
 		</div>
 		<div class="row">
@@ -105,10 +105,10 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<div class="container mt-4">
 			<div class="row" style="display: flex; justify-content: flex-end">
             	<div class="col-xs-1 col-md-1">
-            		<input type="submit" value="Guardar" class="btn btn-success btn-block" tabindex="12" title="Guardar datos ingresados">
+            		<input type="submit" value="Guardar" class="btn btn-success btn-block" tabindex="12" title="Guardar datos ingresados" id="btnguardar">
             	</div>
             	<div class="col-xs-1 col-md-1">
-            		<a th:href="@{/cancelar}" class="btn btn-outline-danger">Cancelar</a>
+            		<a th:href="@{/cancelar}" class="btn btn-outline-danger" id="btncancelar">Cancelar</a>
             	</div>
    			</div>
 	</div>

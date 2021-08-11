@@ -9,7 +9,7 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 </head>
 <body>
 	<div class="container mt-4">
-		<a th:href="@{/new}" class="btn btn-success">Agregar</a>
+		<a th:href="@{/new}" class="btn btn-success" id="btnAgregar">Agregar</a>
 	</div>
 	<div class="container mt-4">
 		<table class="table table-bordered">
@@ -25,7 +25,7 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="formulario:${form}">
+				<tr th:each="formulario:${form}" id="tabla">
 					<td th:text="${formulario.id}"></td>
 					<td th:text="${formulario.name}"></td>
 					<td th:text="${formulario.fSurname}">
@@ -33,8 +33,8 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 					<td th:text="${formulario.email}"></td>
 					<td th:text="${formulario.club}"></td>
 					<td style='text-align:center'>
-					<a th:href="@{/editar/}+${formulario.id}" class="btn btn-outline-primary">Editar</a>
-					<a th:href="@{/eliminar/}+${formulario.id}" class="btn btn-outline-danger">Eliminar</a>
+					<a th:href="@{/editar/}+${formulario.id}" class="btn btn-outline-primary" id="btnEditar">Editar</a>
+					<a th:href="@{/eliminar/}+${formulario.id}" class="btn btn-outline-danger" id="btnEliminar">Eliminar</a>
 					</td>
 				</tr>
 			</tbody>
