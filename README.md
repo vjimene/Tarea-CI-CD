@@ -1,13 +1,21 @@
-# Tarea-CI-CD
+# Formulario ViRun
+## Descripción
+Este código es un fragmento para la plataforma ViRun que consta de un formulario para guardar información + un set de pruebas no exhaustivo con Selenium
+
+## Tecnología
+- `Java` como lenguaje de programación.
+- `Junit` como framework de pruebas unitarias.
+- `Selenium` como entorno de pruebas
+- `Maven` para gestión de paquetes.
+- `Eclipse` o `Spring Tool` como IDE.
 
 ## Instalación
-
 Para poder utilizar este programa se debe instalar [Eclipse](https://www.eclipse.org/downloads/), donde instalaremos el framework de trabajo de Java.
 Este proyecto utiliza Maven, jUnit y SpringBoot, este último se encuentra en el Marketplace de eclipse y se instala buscando en él "Spring Tools 4".
 
 Se debe realizar click derecho en el proyecto, luego de esto seleccionaremos Maven, donde tendremos que seleccionar la opción Maven install. Luego de esto realizaremos la misma acción pero esta vez seleccionaremos Update Project.
 
-Se requiere tener instalado el navegador Google Chrome.
+Se requiere tener instalado el navegador Google Chrome, lo cual es fundamental para que funcionen las pruebas con selenium.
 
 Finalmente, se requiere crear un scheme en MySQL y corregir las credenciales en el archivo application.properties
 
